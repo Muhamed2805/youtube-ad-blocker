@@ -1,0 +1,7 @@
+.ytp-ad-overlay-container,
+#player-ads,
+ytd-promoted-sparkles-web-renderer,
+ytd-compact-promoted-video-renderer,
+ytd-display-ad-renderer {
+  display: none !important;
+}
