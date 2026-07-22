@@ -4,8 +4,8 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "doubleclick.net",
-      "resourceTypes": ["script", "xmlhttprequest"]
+      "urlFilter": "||doubleclick.net^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "sub_frame"]
     }
   },
   {
@@ -13,8 +13,44 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "googlesyndication.com",
-      "resourceTypes": ["script", "image", "xmlhttprequest"]
+      "urlFilter": "||googlesyndication.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "sub_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/pagead/",
+      "resourceTypes": ["script", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/api/stats/ads",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/get_midroll_info",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||googleads.g.doubleclick.net^",
+      "resourceTypes": ["xmlhttprequest", "script"]
     }
   }
 ]

@@ -1,39 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Ad Blocker - 21Ajs-Enhanced",
-  "version": "1.1",
-  "description": "Blocks and skips YouTube ads automatically.",
-  "permissions": [
-    "scripting",
-    "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess",
-    "storage"
-  ],
-  "host_permissions": [
-    "*://*.youtube.com/*",
-    "*://*.doubleclick.net/*",
-    "*://*.googlesyndication.com/*"
-  ],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_icon": {
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
-  },
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["content/contentScript.js"],
-      "css": ["content/contentStyle.css"]
-    }
-  ],
+  "name": "YouTube AdBlock",
+  "version": "1.0",
+  "description": "Blokira reklame na YouTube-u",
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["*://*.youtube.com/*", "*://*.googlevideo.com/*", "*://*.doubleclick.net/*"],
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -42,5 +13,13 @@
         "path": "rules.json"
       }
     ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_start"
+    }
+  ]
 }

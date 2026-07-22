@@ -1,0 +1,12 @@
+ytd-display-ad-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-ad-slot-renderer,
+ytd-banner-promo-renderer,
+ytd-companion-slot-renderer,
+#masthead-ad,
+.ytp-ad-overlay-container,
+.ytp-ad-text-overlay,
+.ytp-ad-image-overlay {
+  display: none !important;
+}
