@@ -5,7 +5,7 @@ Chrome ekstenzija (Manifest V3) koja blokira reklame na YouTube-u kombinacijom m
 ## Fajlovi
 
 ```
-yt-adblock/
+youtube-ad-blocker/
 ├── manifest.json   → konfiguracija ekstenzije
 ├── rules.json      → declarativeNetRequest pravila (blokira ad zahtjeve na mrežnom nivou)
 ├── content.js       → hvata i preskače/uklanja reklame koje se provuku u player i feed
